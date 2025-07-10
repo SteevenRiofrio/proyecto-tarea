@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Gestor de Tareas</h1>
+        
+        <!-- Formulario para crear/actualizar tarea -->
+        <div class="form-container">
+            <h2>Crear Nueva Tarea</h2>
+            <form id="tareaForm">
+                <input type="hidden" id="tareaId">
+                <input type="text" id="descripcion" placeholder="Descripción de la tarea" required>
+                <input type="date" id="fechaEntrega" required>
+                <select id="estado">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En Progreso">En Progreso</option>
+                    <option value="Completada">Completada</option>
+                </select>
+                <button type="submit">Guardar Tarea</button>
+                <button type="button" id="cancelar" style="display: none;">Cancelar</button>
+            </form>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="actions">
+            <button id="listarTodas">Ver Todas las Tareas</button>
+            <button id="listarPendientes">Ver Tareas Pendientes</button>
+        </div>
+
+        <!-- Lista de tareas -->
+        <div id="tareasContainer">
+            <h2>Lista de Tareas</h2>
+            <div id="tareasList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
